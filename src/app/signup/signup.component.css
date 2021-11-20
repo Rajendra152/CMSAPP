@@ -42,14 +42,14 @@ body {
   }
   
   #wrapper div {
-    float: left;
+    float: right;
     font-family: helvetica, arial, sans-serif;
   }
   
   #wrapper #div1 {
     margin-top: 30px;
     width: 590px;
-    text-align: left;
+    text-align: right;
   }
   
   #wrapper #div1 p {
