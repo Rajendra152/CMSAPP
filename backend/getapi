@@ -11,11 +11,11 @@ namespace UiAnd.Net.Controllers
 {
     public class customerController : ApiController
     {
-        [HttpGet, Route("api/customer/getdetails")]
-        public HttpResponseMessage get()
+        [HttpGet, Route("api/Student/details")]
+        public HttpResponseMessage get( )
         {
 
-            string query = @"select name,id,content from customer";
+            string query = @"select name,id,content from customer ";
             DataTable t = new DataTable();
             using (var con = new SqlConnection(@"server=IM-RT-LP-706\SQLEXPRESS;database=mydatabase;integrated security=True;"))
             using (var cmd = new SqlCommand(query, con))
@@ -27,13 +27,29 @@ namespace UiAnd.Net.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, t);
 
         }
-        [HttpGet, Route("api/customer/post/{name}/{id}/{content}")]
+        public HttpResponseMessage getbyid(customer cust)
+        {
+
+            string query = @"select name,id,content from customer where id=" + cust.id + ""; 
+            DataTable t = new DataTable();
+            using (var con = new SqlConnection(@"server=IM-RT-LP-706\SQLEXPRESS;database=mydatabase;integrated security=True;"))
+            using (var cmd = new SqlCommand(query, con))
+            using (var da = new SqlDataAdapter(cmd))
+            {
+                cmd.CommandType = CommandType.Text;
+                da.Fill(t);
+            }
+            return Request.CreateResponse(HttpStatusCode.OK, t);
+
+        }
+        [HttpGet, Route("api/Student/post/{name}/{content}")]
 
         public string post(customer cust)
         {
             try
             {
-                string query = @"insert into customer values('" + cust.name + @"''" + cust.id + @"''" + cust.content + @"')";
+
+                string query = @"insert into customer values('" + cust.name + @"','" + cust.content + @"')";
                 DataTable t = new DataTable();
                 using (var con = new SqlConnection(@"server=IM-RT-LP-706\SQLEXPRESS;database=mydatabase;integrated security=True;"))
                 using (var cmd = new SqlCommand(query, con))
@@ -42,21 +58,21 @@ namespace UiAnd.Net.Controllers
                     cmd.CommandType = CommandType.Text;
                     da.Fill(t);
                 }
+
                 return "inserted sucessfully";
             }
-            catch(Exception )
+            catch (Exception)
             {
                 return "failed to insert";
             }
 
         }
-        [HttpGet, Route("api/customer/put/{id}")]
 
         public string put(customer cust)
         {
             try
             {
-                string query = @"update customer set content='" + cust.content + @"' where id=" + cust.id+""; 
+                string query = @"update customer set content='" + cust.content + @"' where id=" + cust.id + "";
                 DataTable t = new DataTable();
                 using (var con = new SqlConnection(@"server=IM-RT-LP-706\SQLEXPRESS;database=mydatabase;integrated security=True;"))
                 using (var cmd = new SqlCommand(query, con))
@@ -67,7 +83,28 @@ namespace UiAnd.Net.Controllers
                 }
                 return "inserted sucessfully";
             }
-            catch (Exception )
+            catch (Exception)
+            {
+                return "failed to insert";
+            }
+
+        }
+        public string delete(customer cust)
+        {
+            try
+            {
+                string query = @"update customer set content='" + cust.content + @"' where id=" + cust.id + "";
+                DataTable t = new DataTable();
+                using (var con = new SqlConnection(@"server=IM-RT-LP-706\SQLEXPRESS;database=mydatabase;integrated security=True;"))
+                using (var cmd = new SqlCommand(query, con))
+                using (var da = new SqlDataAdapter(cmd))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    da.Fill(t);
+                }
+                return "inserted sucessfully";
+            }
+            catch (Exception)
             {
                 return "failed to insert";
             }
@@ -76,3 +113,6 @@ namespace UiAnd.Net.Controllers
 
     }
 }
+
+
+
