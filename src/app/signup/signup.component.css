@@ -189,9 +189,11 @@ body {
     width: 90px;
     color: rgba(234, 240, 239, 0.911);
     text-decoration: none;
+    margin-top: 10px;
   }
   
   .background{
       background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNxm2lWJgskKt9CmsFuVSXNhIWLMLnExkZEyyeKdqPKEOpDdAftp8WohMzajcVMIbBA_g&usqp=CAU");
       background-size: cover;
   }
+  
