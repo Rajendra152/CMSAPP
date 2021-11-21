@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
 import { PasswordComponent } from './password/password.component';
+import { ContentpageComponent } from './contentpage/contentpage.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PasswordComponent } from './password/password.component';
     LoginComponent,
     SignupComponent,
     LandingComponent,
-    PasswordComponent
+    PasswordComponent,
+    ContentpageComponent
   ],
   imports: [
     BrowserModule,

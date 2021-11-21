@@ -4,6 +4,7 @@ import { PasswordComponent } from './password/password.component';
 import { LoginComponent } from './login/login.component';
 import { LandingComponent } from './landing/landing.component';
 import { SignupComponent } from './signup/signup.component';
+import { ContentpageComponent } from './contentpage/contentpage.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'password',component:PasswordComponent},
+  {path:'contentpage',component:ContentpageComponent},
   
 ];
 
