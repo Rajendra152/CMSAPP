@@ -22,7 +22,7 @@ body, ul, li, a, h1, h2, h3, h4, h5, h6, p {
   }
   
   .container {
-    max-width: 960px;
+    max-width: 700px;
     margin: 0 auto;
   }
   
@@ -45,8 +45,8 @@ body, ul, li, a, h1, h2, h3, h4, h5, h6, p {
   
   .login-form {
     margin: 0 auto;
-    background: #ffffff;
-    width: 600px;
+    background: #ebede1;
+    width: 400px;
     text-align: center;
     padding: 40px 0;
   }
@@ -84,7 +84,7 @@ body, ul, li, a, h1, h2, h3, h4, h5, h6, p {
   }
   
   form button {
-    background-color: #4267b2;
+    background-color: #7d8aa5;
     color: white;
     padding: 14px;
     margin: 5px 0;
@@ -109,31 +109,6 @@ body, ul, li, a, h1, h2, h3, h4, h5, h6, p {
   form p span { background:#fff; padding:0 10px; }
   
   
-  /* Footer Styles */
-  
-  footer {
-    padding: 100px 0 20px 0;
-  }
-  
-  footer ul li {
-    padding-right: 15px;
-    padding-bottom: 5px;
-    font-size: 14px;
-  }
-  
-  footer ul li a{
-    color: #385898;
-    text-decoration: none;
-  }
-  
-  .languages {
-    display: flex;
-  }
-  
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-  }
   
   .back{
     background-color: rgb(22, 177, 22);
@@ -142,3 +117,4 @@ body, ul, li, a, h1, h2, h3, h4, h5, h6, p {
     color: rgba(234, 240, 239, 0.911);
     text-decoration: none;
   }
+
