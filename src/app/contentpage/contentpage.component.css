@@ -1,31 +1,23 @@
-.input-box{
-    height: 100px;
-    width: 300px;
+/* This is the contentpage css code for the cms app */
+.input-box {
+  height: 200px;
+  width: 400px;
 }
 
-.submit-btn{
-    margin-top: 10px;
-    background-color: blueviolet;
-    color: white;
-    height: 30px;
-    width: 60px;
-    border-width: 0px;
-    border-radius: 5px;
-    float: left;
+.submit-btn {
+  margin-top: 10px;
+  background-color: blueviolet;
+  color: white;
+  height: 40px;
+  width: 70px;
+  border-width: 0px;
+  border-radius: 5px;
+  float: left;
+  font-family: 'Roboto', sans-serif;
 }
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-  
-  /* Header Styles */
-  
-  header {
-    background-color: #3b5998;
-    padding: 20px 0;
-    height: 50px;
-  }
-  .main-heading{
-    text-align: center;
-    color: rgb(32, 211, 157);
+.main-heading {
+  text-align: center;
+  color: rgb(180, 125, 21);
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
 }

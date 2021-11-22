@@ -1,58 +1,46 @@
-    <header>
-        <div class="container">
-          <div class="content">
-            <h1 class="main-heading">Content Management System App</h1>
-          </div>
-        </div>
-      </header>
-      <div class="background">
-    <div id="wrapper">
-      <div id="div2">
-        <h1>Create New Account</h1>
-        <li>
-          <input
-            type="text"
-            placeholder="First Name"
-            id="Firstname"
-            required
-          />
-        </li>
-
-        <li>
-          <input
-            type="text"
-            placeholder="Surname"
-            id="surname"
-            required
-          />
-        </li>
-
-        <li>
-          <input
-            type="text"
-            placeholder="email"
-            id="email-input"
-            required
-          />
-        </li>
-        <li>
-          <input
-            type="password"
-            placeholder="password"
-            required
-          />
-        </li>
-        <br />
-
-        <input
-          type="submit"
-          value="Submit"
-          class="back"
-        />
-        <br />
-        <button class="btn btn-primary back">
-          <a href="/">Back</a>
-        </button>
-      </div>
+<!--This code is the signup page code for the cms app-->
+<header>
+  <div class="container">
+    <div class="content">
+      <h1 class="main-heading">Content Management System App</h1>
     </div>
-      </div>
+  </div>
+</header>
+  <div id="wrapper">
+    <div id="div2">
+      <h1>Create New Account</h1>
+      <li>
+        <input type="text" placeholder="First Name" id="Firstname" required (keyup)="onkey($event, 'firstname')"/>
+        <p *ngIf="!valid.firstname" class="text-red-10 text-xs italic">Min.length is 5 characters</p>
+      </li>
+
+      <li>
+        <input type="text" placeholder="Surname" id="surname" required (keyup)="onkey($event, 'lastname')"/>
+        <p *ngIf="!valid.lastname" class="text-red-100 text-sm italic"Min.length is 5 characters></p>
+      </li>
+
+      <li>
+        <input type="text" placeholder="email" id="email-input" required (keyup)="onkey($event, 'email')"/>
+        <p *ngIf="!valid.email" class="text-red-200 text-xs italic">Invalid Email</p>
+      </li>
+      <li>
+        <input type="text" placeholder="mobileno" id="mobileno-input" required (keyup)="onkey($event, 'mobileno')"/>
+        <p *ngIf="!valid.mobileno" class="text-red-200 text-xs italic">Invalid Mobile Number</p>
+      </li>
+      <li>
+        <input type="password" placeholder="password" required (keyup)="onkey($event, 'password')"/>
+        <p *ngIf="!valid.password" class="text-red-200 text-xs italic">Invalid Password</p>
+      </li>
+      <li>
+        <input type="password" placeholder="confirm password" required (keyup)="onkey($event, 'confirmPassword')"/>
+        <p *ngIf="!valid.password" class="text-red-200 text-xs italic">Invalid Password</p>
+      </li>
+      <br />
+
+      <input type="submit" value="Submit" class="back" routerLink="/contentpage" />
+      <br />
+      <button class="btn btn-primary back">
+        <a href="/">Back</a>
+      </button>
+    </div>
+  </div>
