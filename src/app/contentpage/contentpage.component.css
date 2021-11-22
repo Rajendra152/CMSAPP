@@ -1,0 +1,31 @@
+.input-box{
+    height: 100px;
+    width: 300px;
+}
+
+.submit-btn{
+    margin-top: 10px;
+    background-color: blueviolet;
+    color: white;
+    height: 30px;
+    width: 60px;
+    border-width: 0px;
+    border-radius: 5px;
+    float: left;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  /* Header Styles */
+  
+  header {
+    background-color: #3b5998;
+    padding: 20px 0;
+    height: 50px;
+  }
+  .main-heading{
+    text-align: center;
+    color: rgb(32, 211, 157);
+}

@@ -62,7 +62,7 @@ body {
   
   #wrapper #div2 {
     margin-top: 10px;
-    width: 390px;
+    width: 350px;
     text-align: left;
   }
   
@@ -83,15 +83,15 @@ body {
   }
   
   #wrapper #div2 li #firstname {
-    width: 100%;
+    width: 80%;
   }
   
   #wrapper #div2 li #surname {
-    width: 100%;
+    width: 80%;
   }
   
   #wrapper #div2 li input[type="text"] {
-    width: 100%;
+    width: 80%;
     height: 40px;
     border-radius: 5px;
     padding-left: 10px;
@@ -100,7 +100,7 @@ body {
   }
   
   #wrapper #div2 li input[type="password"] {
-    width: 100%;
+    width: 80%;
     height: 40px;
     border-radius: 5px;
     padding-left: 10px;
