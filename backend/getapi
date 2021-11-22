@@ -1,118 +1,68 @@
-using System.Data.SqlClient;
-using System.Net.Http;
-using System.Web.Http;
-using System.Data;
-using System.Net;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System;
-using UiAnd.Net.models;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Repoistary1;
+using CustomerDetails;
 
-namespace UiAnd.Net.Controllers
 
+namespace Uland.Net2.Controllers
 {
-    public class customerController : ApiController
+    
+    public class CustomerController : ControllerBase
     {
-        [HttpGet, Route("api/Student/details")]
-        public HttpResponseMessage get( )
+        private readonly ICustomerService _customerService;
+        public CustomerController(ICustomerService customerService)
         {
-
-            string query = @"select name,id,content from customer ";
-            DataTable t = new DataTable();
-            using (var con = new SqlConnection(@"server=IM-RT-LP-706\SQLEXPRESS;database=mydatabase;integrated security=True;"))
-            using (var cmd = new SqlCommand(query, con))
-            using (var da = new SqlDataAdapter(cmd))
-            {
-                cmd.CommandType = CommandType.Text;
-                da.Fill(t);
-            }
-            return Request.CreateResponse(HttpStatusCode.OK, t);
-
+            _customerService = customerService;
         }
-        public HttpResponseMessage getbyid(customer cust)
+        [HttpGet, Route("api/Customer/CustomerDetails")]
+        public IEnumerable<Customer> GetCustomers()
         {
-
-            string query = @"select name,id,content from customer where id=" + cust.id + ""; 
-            DataTable t = new DataTable();
-            using (var con = new SqlConnection(@"server=IM-RT-LP-706\SQLEXPRESS;database=mydatabase;integrated security=True;"))
-            using (var cmd = new SqlCommand(query, con))
-            using (var da = new SqlDataAdapter(cmd))
-            {
-                cmd.CommandType = CommandType.Text;
-                da.Fill(t);
-            }
-            return Request.CreateResponse(HttpStatusCode.OK, t);
-
+            return _customerService.GetCustomers();
         }
-        [HttpGet, Route("api/Student/post/{name}/{content}")]
-
-        public string post(customer cust)
+        [HttpGet, Route("api/Customer/Login/{rollnumber}")]
+        public IEnumerable<Customer> GetCustomersbyid(int rollnumber)
         {
-            try
+            return _customerService.GetCustomersbyid(rollnumber);
+        }
+        [HttpGet, Route("api/Customer/Registration/{FirstName}/{Id}/{Lastname}/{email}/{pass}/{cpass}/{content}")]
+        public bool insert(Customer customer)
+        {
+            if (_customerService.Insertdata(customer))
             {
-
-                string query = @"insert into customer values('" + cust.name + @"','" + cust.content + @"')";
-                DataTable t = new DataTable();
-                using (var con = new SqlConnection(@"server=IM-RT-LP-706\SQLEXPRESS;database=mydatabase;integrated security=True;"))
-                using (var cmd = new SqlCommand(query, con))
-                using (var da = new SqlDataAdapter(cmd))
-                {
-                    cmd.CommandType = CommandType.Text;
-                    da.Fill(t);
-                }
-
-                return "inserted sucessfully";
-            }
-            catch (Exception)
-            {
-                return "failed to insert";
+                return true;
             }
 
+            else
+            {
+                return false;
+            }
         }
 
-        public string put(customer cust)
+        [HttpGet, Route("api/Customer/UpdateContent/{rollnumber}/{content}")]
+        public IEnumerable<Customer> PromoteToNextClass( Customer customer)
         {
-            try
+            if (_customerService.UpdateContent(customer))
             {
-                string query = @"update customer set content='" + cust.content + @"' where id=" + cust.id + "";
-                DataTable t = new DataTable();
-                using (var con = new SqlConnection(@"server=IM-RT-LP-706\SQLEXPRESS;database=mydatabase;integrated security=True;"))
-                using (var cmd = new SqlCommand(query, con))
-                using (var da = new SqlDataAdapter(cmd))
-                {
-                    cmd.CommandType = CommandType.Text;
-                    da.Fill(t);
-                }
-                return "inserted sucessfully";
+                return _customerService.GetCustomers().Where(s => s.mobile == customer.mobile);
             }
-            catch (Exception)
-            {
-                return "failed to insert";
-            }
+
+            return Enumerable.Empty<Customer>();
 
         }
-        public string delete(customer cust)
+        [HttpGet, Route("api/Customer/RemoveContent/{rollNumber}")]
+        public IEnumerable<Customer> DeleStudent(int rollNumber)
         {
-            try
+            if (_customerService.DeleteContent(rollNumber))
             {
-                string query = @"update customer set content='" + cust.content + @"' where id=" + cust.id + "";
-                DataTable t = new DataTable();
-                using (var con = new SqlConnection(@"server=IM-RT-LP-706\SQLEXPRESS;database=mydatabase;integrated security=True;"))
-                using (var cmd = new SqlCommand(query, con))
-                using (var da = new SqlDataAdapter(cmd))
-                {
-                    cmd.CommandType = CommandType.Text;
-                    da.Fill(t);
-                }
-                return "inserted sucessfully";
-            }
-            catch (Exception)
-            {
-                return "failed to insert";
+                return _customerService.GetCustomers();
             }
 
+            return Enumerable.Empty<Customer>();
         }
 
     }
 }
-
-
-
