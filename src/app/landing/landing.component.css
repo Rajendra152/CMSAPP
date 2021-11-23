@@ -44,6 +44,8 @@ ul {
   background: #42b72a;
   margin: 10px 0;
   width: 150px;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
 }
 
 /* Main Styles */
@@ -115,6 +117,7 @@ form button {
   background: #42b72a;
   margin: 10px 0;
   font-family: 'Roboto', sans-serif;
+  cursor: pointer;
 }
 
 form p {

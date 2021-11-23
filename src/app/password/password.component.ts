@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-password',
@@ -31,5 +32,8 @@ export class PasswordComponent implements OnInit {
     }
     this.validate(type)
   }
+  successNotification(){
+    Swal.fire('Password has been successfully updated', 'We have been informed!', 'success')
+  } 
 }
 

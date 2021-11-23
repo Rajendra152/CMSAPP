@@ -1,9 +1,15 @@
 <ul>
-    <li><a class="active" href="#home">Home</a></li>
-    <li><a routerLink= "login">Login</a></li>
-    <li><a routerLink= "signup">Signup</a></li>
-    <li><a routerLink= "contentpage">Contentpage</a></li>
-    <li><a routerLink= "aboutus">About us</a></li>
-  </ul>
-  <router-outlet></router-outlet>
-  
+  <div class="logo">
+    <li><i class="fa-solid fa-square-pen"></i></li>
+    <li><a class="active">RS Magazine</a></li>
+  </div>
+
+  <li><a routerLink="aboutus">About us</a></li>
+  <li>
+    <a routerLink="contentpage" (click)="alertConfirmation()">Contentpage </a>
+  </li>
+  <li><a routerLink="signup">Signup</a></li>
+  <li><a routerLink="login">Login</a></li>
+  <li><a href="#home">Home</a></li>
+</ul>
+<router-outlet></router-outlet>

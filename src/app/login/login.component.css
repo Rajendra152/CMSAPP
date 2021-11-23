@@ -31,19 +31,6 @@ ul {
   list-style: none;
 }
 
-.container {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Header Styles */
-
-header {
-  background-color: #3b5998;
-  padding: 20px 0;
-  height: 50px;
-  font-family: 'Roboto', sans-serif;
-}
 
 /* Main Styles */
 
@@ -54,7 +41,7 @@ main {
 }
 
 .login-form {
-  margin-left: 75%;
+  margin-left: 65%;
   background: #ebede1;
   width: 400px;
   text-align: center;
@@ -103,6 +90,7 @@ form button {
   margin: 5px 0;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
+  cursor: pointer;
 }
 
 .create-account {
@@ -111,6 +99,7 @@ form button {
   color: #ffffff;
   background: #42b72a;
   margin: 10px 0;
+  cursor: pointer;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -134,4 +123,5 @@ form p span {
   color: rgba(234, 240, 239, 0.911);
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
+  cursor: pointer;
 }

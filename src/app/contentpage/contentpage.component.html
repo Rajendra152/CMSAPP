@@ -1,19 +1,30 @@
-<!--This is the content page code for the cms app-->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contentpage</title>
-  </head>
-  <body>
-    <form>
-      <h1 class="main-heading">Write your Content here!!</h1>
-      <input type="text" placeholder="" class="input-box" />
-      <br />
-      <input type="submit" value="Post" class="submit-btn" />
-      <br/>
-    </form>
-  </body>
-</html>
+<section id="contact-form">
+	<form>
+	<!--left--------------------------------------->
+	<div class="contact-left">
+	<h1 class="c-l-heading"><font style="border-bottom: 3px solid #1ED98B;"></font>CMS App</h1>
+	<!--name-------->
+	<div class="f-name">
+	<font >Writer</font>
+	<input type="text" placeholder="Full Name"/>
+	</div>
+	<!--email-------->
+	<div class="f-email">
+	<font >Category of content</font>
+	<input type="text" placeholder="category"/>
+	</div>
+	</div>
+	<!--right------------------------------------------->
+	<div class="contact-right">
+	<!--message-------->
+	<div class="message">
+	<font >Write Your Content Here</font>
+	<textarea name="message" rows="5" cols="20" placeholder="Start Typing..."></textarea>
+	</div>
+	<!--submit-btn------------>
+  <button class="create-account" routerLink="/">Post
+  </button>
+	</div>
+		
+	</form>
+	</section>
