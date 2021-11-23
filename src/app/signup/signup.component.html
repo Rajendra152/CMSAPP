@@ -1,14 +1,23 @@
 <!--This code is the signup page code for the cms app-->
-<header>
-  <div class="container">
-    <div class="content">
-      <h1 class="main-heading">Content Management System App</h1>
-    </div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container d-flex flex-column justify-content-start">
+  <div>
+    <h1 class="heading">The best platform to share content with a huge community of readers</h1>
   </div>
-</header>
   <div id="wrapper">
     <div id="div2">
+      <br />
       <h1>Create New Account</h1>
+      <br />
       <li>
         <input type="text" placeholder="First Name" id="Firstname" required (keyup)="onkey($event, 'firstname')"/>
         <p *ngIf="!valid.firstname" class="text-red-10 text-xs italic">Min.length is 5 characters</p>
@@ -24,15 +33,15 @@
         <p *ngIf="!valid.email" class="text-red-200 text-xs italic">Invalid Email</p>
       </li>
       <li>
-        <input type="text" placeholder="mobileno" id="mobileno-input" required (keyup)="onkey($event, 'mobileno')"/>
+        <input type="text" placeholder="Mobilenumber" id="mobileno-input" required (keyup)="onkey($event, 'mobileno')"/>
         <p *ngIf="!valid.mobileno" class="text-red-200 text-xs italic">Invalid Mobile Number</p>
       </li>
       <li>
-        <input type="password" placeholder="password" required (keyup)="onkey($event, 'password')"/>
+        <input type="password" placeholder="Password" required (keyup)="onkey($event, 'password')"/>
         <p *ngIf="!valid.password" class="text-red-200 text-xs italic">Invalid Password</p>
       </li>
       <li>
-        <input type="password" placeholder="confirm password" required (keyup)="onkey($event, 'confirmPassword')"/>
+        <input type="password" placeholder="Confirm Password" required (keyup)="onkey($event, 'confirmPassword')"/>
         <p *ngIf="!valid.password" class="text-red-200 text-xs italic">Invalid Password</p>
       </li>
       <br />
@@ -43,3 +52,6 @@
       </button>
     </div>
   </div>
+</div>
+</body>
+</html>
