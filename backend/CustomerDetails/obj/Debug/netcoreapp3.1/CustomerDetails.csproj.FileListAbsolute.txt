@@ -1,0 +1,10 @@
+C:\Users\skoppad\source\repos\Uland.Net2\CustomerDetails\bin\Debug\netcoreapp3.1\CustomerDetails.deps.json
+C:\Users\skoppad\source\repos\Uland.Net2\CustomerDetails\bin\Debug\netcoreapp3.1\CustomerDetails.dll
+C:\Users\skoppad\source\repos\Uland.Net2\CustomerDetails\bin\Debug\netcoreapp3.1\CustomerDetails.pdb
+C:\Users\skoppad\source\repos\Uland.Net2\CustomerDetails\obj\Debug\netcoreapp3.1\CustomerDetails.csproj.AssemblyReference.cache
+C:\Users\skoppad\source\repos\Uland.Net2\CustomerDetails\obj\Debug\netcoreapp3.1\CustomerDetails.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\skoppad\source\repos\Uland.Net2\CustomerDetails\obj\Debug\netcoreapp3.1\CustomerDetails.AssemblyInfoInputs.cache
+C:\Users\skoppad\source\repos\Uland.Net2\CustomerDetails\obj\Debug\netcoreapp3.1\CustomerDetails.AssemblyInfo.cs
+C:\Users\skoppad\source\repos\Uland.Net2\CustomerDetails\obj\Debug\netcoreapp3.1\CustomerDetails.csproj.CoreCompileInputs.cache
+C:\Users\skoppad\source\repos\Uland.Net2\CustomerDetails\obj\Debug\netcoreapp3.1\CustomerDetails.dll
+C:\Users\skoppad\source\repos\Uland.Net2\CustomerDetails\obj\Debug\netcoreapp3.1\CustomerDetails.pdb
