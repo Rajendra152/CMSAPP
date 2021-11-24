@@ -1,3 +1,10 @@
+
+/**
+ * @description The below code is used to display about the details of the forgot password page of application
+ * importing Component,OnInit from '@angular/core';
+ * importing html and css from the password component folder and integrating it.
+ */
+
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2'
 
@@ -6,6 +13,12 @@ import Swal from 'sweetalert2'
   templateUrl: './password.component.html',
   styleUrls: ['./password.component.css']
 })
+
+
+/**
+ * @Params Creating the class PasswordComponent and exporting it
+ */
+
 export class PasswordComponent implements OnInit {
   email = '';
 

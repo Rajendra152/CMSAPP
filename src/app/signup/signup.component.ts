@@ -1,3 +1,10 @@
+
+/**
+ * @description The below code is used to display about the details of the signup page of application
+ * importing Component,OnInit from '@angular/core';
+ * importing html and css from the signup component folder and integrating it.
+ */
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,6 +12,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
 })
+
+
+/**
+ * @Params Creating the class SignupComponent and exporting it
+ */
+
 export class SignupComponent implements OnInit {
   firstname = "";
   lastname = "";

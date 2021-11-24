@@ -1,3 +1,5 @@
+/* This code is css code for the Aboutus component */
+
 .heading-one{
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -33,6 +35,7 @@
     padding-right: 16px;
     padding-left: 22px;
     float: left;
+    cursor: pointer;
   }
   .icon {
     color: #d0b200;

@@ -1,3 +1,8 @@
+/**
+ * Importing all the dependencies
+ * importing all the components from local components
+ * exporting class AppModule
+ */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 

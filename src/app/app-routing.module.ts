@@ -1,3 +1,10 @@
+/**
+ * Importing all the dependencies
+ * importing all the components from local components
+ * Routing the components
+ */
+
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PasswordComponent } from './password/password.component';
