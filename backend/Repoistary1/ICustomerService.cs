@@ -13,5 +13,8 @@ namespace Repoistary1
         bool DeleteContent(string email);
          bool login(string email,string pass);
         string Getcontentbyid(string email);
+        bool ChangeContent(string content,string email);
+        bool DeleteContents(string email);
+        bool UpdateMobile(int mobile, string email);
     }
 }

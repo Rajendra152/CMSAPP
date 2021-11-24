@@ -36,7 +36,7 @@ namespace Uland.Net2.Controllers
                 return false;
             }
         }
-        [HttpGet, Route("api/Customer/Registration/{FirstName}/{Lastname}/{mobile}/{email}/{pass}/{confirmpass}/{content}")]
+        [HttpPost, Route("api/Customer/Registration/{FirstName}/{Lastname}/{mobile}/{email}/{pass}/{confirmpass}/{content}")]
         public bool insert(Customer customer)
         {
             if (_customerService.Insertdata(customer))
@@ -50,7 +50,7 @@ namespace Uland.Net2.Controllers
             }
         }
 
-        [HttpGet, Route("api/Customer/Updatepassword/{email}/{pass}")]
+        [HttpPatch, Route("api/Customer/Updatepassword")]
         public bool PromoteToNextClass( string pass,string email)
         {
             if (_customerService.UpdateContent( pass, email))
@@ -64,8 +64,51 @@ namespace Uland.Net2.Controllers
             }
 
         }
-        [HttpGet, Route("api/Customer/RemoveContent/{email}")]
-        public bool DeleStudent(string email)
+        [HttpGet, Route("api/Customer/UpdateMobile/{email}/{mobile}")]
+        public bool UpdateMobile(int mobile, string email)
+        {
+            if (_customerService.UpdateMobile(mobile, email))
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+
+        }
+        [HttpPatch, Route("api/Customer/ChangeContent/{email}/{content}")]
+        public bool ChangeContent(string content, string email)
+        {
+            if (_customerService.ChangeContent(content, email))
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+
+        }
+        [HttpPatch, Route("api/Customer/DeleteContent/{email}")]
+
+        public bool DeleteContent( string email)
+        {
+            if (_customerService.DeleteContents( email))
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+
+        }
+        [HttpDelete, Route("api/Customer/Removedata/{email}")]
+        public bool Deledata(string email)
         {
             if (_customerService.DeleteContent(email))
             {

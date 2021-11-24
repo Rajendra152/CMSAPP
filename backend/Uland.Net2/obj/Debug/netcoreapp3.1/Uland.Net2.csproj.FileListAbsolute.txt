@@ -29,4 +29,3 @@ C:\Users\skoppad\source\repos\Uland.Net2\Uland.Net2\bin\Debug\netcoreapp3.1\Cust
 C:\Users\skoppad\source\repos\Uland.Net2\Uland.Net2\bin\Debug\netcoreapp3.1\Repoistary1.dll
 C:\Users\skoppad\source\repos\Uland.Net2\Uland.Net2\bin\Debug\netcoreapp3.1\CustomerDetails.pdb
 C:\Users\skoppad\source\repos\Uland.Net2\Uland.Net2\bin\Debug\netcoreapp3.1\Repoistary1.pdb
-C:\Users\skoppad\source\repos\Uland.Net2\Uland.Net2\obj\Debug\netcoreapp3.1\Uland.Net2.csproj.CopyComplete

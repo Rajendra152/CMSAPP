@@ -96,6 +96,84 @@ namespace Repoistary1
             }
             return isSuccess;
         }
+        public bool UpdateMobile(int  mobile, string email)
+        {
+            bool isSuccess = false;
+            try
+            {
+                using (_command = new SqlCommand($"UPDATE customer SET mobile ='" + mobile + "' WHERE email= '" + email + "'", _connection))
+                {
+                    if (_connection.State == System.Data.ConnectionState.Closed)
+                        _connection.Open();
+
+                    _command.ExecuteNonQuery();
+
+                    isSuccess = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new CustomerException(ex.Message, ex);
+            }
+            finally
+            {
+                if (_connection.State == System.Data.ConnectionState.Open)
+                    _connection.Close();
+            }
+            return isSuccess;
+        }
+        public bool DeleteContents( string email)
+        {
+            bool isSuccess = false;
+            try
+            {
+                using (_command = new SqlCommand($"UPDATE customer SET content = NULL  WHERE email= '" + email + "'", _connection))
+                {
+                    if (_connection.State == System.Data.ConnectionState.Closed)
+                        _connection.Open();
+
+                    _command.ExecuteNonQuery();
+
+                    isSuccess = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new CustomerException(ex.Message, ex);
+            }
+            finally
+            {
+                if (_connection.State == System.Data.ConnectionState.Open)
+                    _connection.Close();
+            }
+            return isSuccess;
+        }
+        public bool ChangeContent(string content, string email)
+        {
+            bool isSuccess = false;
+            try
+            {
+                using (_command = new SqlCommand($"UPDATE customer SET content ='" + content + "' WHERE email= '" + email + "'", _connection))
+                {
+                    if (_connection.State == System.Data.ConnectionState.Closed)
+                        _connection.Open();
+
+                    _command.ExecuteNonQuery();
+
+                    isSuccess = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new CustomerException(ex.Message, ex);
+            }
+            finally
+            {
+                if (_connection.State == System.Data.ConnectionState.Open)
+                    _connection.Close();
+            }
+            return isSuccess;
+        }
         public IEnumerable<Customer> GetCustomers()
         {
             List<Customer> _customers = new List<Customer>();
