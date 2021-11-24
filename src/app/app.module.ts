@@ -15,6 +15,10 @@ import { PasswordComponent } from './password/password.component';
 import { ContentpageComponent } from './contentpage/contentpage.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 
+import { HttpClientModule } from "@angular/common/http";
+import { SharedService } from "../app/shared.service";
+import { FormsModule,ReactiveFormsModule } from "@angular/forms";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,9 +31,12 @@ import { AboutusComponent } from './aboutus/aboutus.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
