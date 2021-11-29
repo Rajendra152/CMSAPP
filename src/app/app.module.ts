@@ -14,10 +14,9 @@ import { LandingComponent } from './landing/landing.component';
 import { PasswordComponent } from './password/password.component';
 import { ContentpageComponent } from './contentpage/contentpage.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-
 import { HttpClientModule } from "@angular/common/http";
-import { SharedService } from "../app/shared.service";
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
+import { ApiService } from './shared/api.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +35,7 @@ import { FormsModule,ReactiveFormsModule } from "@angular/forms";
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [SharedService],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
