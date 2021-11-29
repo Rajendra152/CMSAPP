@@ -7,14 +7,13 @@ import {map} from 'rxjs/operators'
 })
 export class ApiService{
 
-  readonly APIUrl = "http://localhost:47667/api/Travel/Register";
+  readonly APIUrl = "http://localhost:47667/api/Travel/Register"; //Backend localhost link
 
   constructor(private _http : HttpClient) { }
 
  
-  Register(empObj : any){
+  Signup(empObj : any){
     console.log("empobj.....",empObj);
-    //return this._http.post<any>(this.loginAPIUrl+"signup",empObj)
     return this._http.post<any>(this.APIUrl ,empObj)
   }
   Login(empObj:any){

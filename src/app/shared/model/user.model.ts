@@ -1,12 +1,9 @@
 export class UserModel{
-    UserName!:string;
-    Emailid!: string;
-    phnNo!:string;
-    CreatePassword!:string;
+    Firstname!:string;
+    Lastname!: string;
+    Email!:string;
+    Mobileno!:string;
+    Password!:string;
     ConfirmPassword!:string;
-    Name!:string;
-    Gender!:string;
-    Age!:string;
-    Nationality!:string
 
 }

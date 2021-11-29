@@ -6,6 +6,10 @@
  */
 
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from '../shared/api.service';
+import { UserModel } from '../shared/model/user.model';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -18,28 +22,44 @@ import { Component, OnInit } from '@angular/core';
  */
 
 export class LoginComponent implements OnInit {
-  email = '';
+  public data = {
+  email : '',
+  password : '',
+  }
 
   valid = {
     email: true,
+    password: true,
   };
 
-  constructor() {}
+  public loginObj = new UserModel();
+  constructor(private http: HttpClient, private router: Router, private api: ApiService) { }
 
   ngOnInit(): void {}
   validate(type: string): void {
     const emailPattern = /\S+@\S+\.\S+/;
 
     if (type === 'email') {
-      this.valid.email = emailPattern.test(this.email);
+      this.valid.email = emailPattern.test(this.data.email);
     }
   }
 
   //onkey function
   onkey(event: any, type: string) {
     if (type === 'email') {
-      this.email = event.target.value;
+      this.data.email = event.target.value;
     }
     this.validate(type)
+  }
+
+  Login() {
+    const formData = new FormData();
+    formData.append("Email",this.data.email)
+    formData.append("Password",this.data.password)
+    console.log(this.loginObj)
+    this.api.Login(formData)
+      .subscribe(res => {
+        alert("success");
+      })
   }
 }

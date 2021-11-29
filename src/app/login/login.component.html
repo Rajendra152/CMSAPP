@@ -8,7 +8,7 @@
           <input type="email" placeholder="Email" required (keyup)="onkey($event, 'email')"/>
           <p *ngIf="!valid.email" class="text-red-200 text-xs italic">Invalid Email</p>
           <input type="password" placeholder="Password" required />
-          <button type="submit" routerLink="/contentpage">Log In</button>
+          <button type="submit" (click)="Login()" routerLink="/contentpage">Log In</button>
           <a href="/password">Forgot Password?</a>
           <p>
             <span>or</span>
