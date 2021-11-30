@@ -9,17 +9,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-aboutus',
   templateUrl: './aboutus.component.html',
-  styleUrls: ['./aboutus.component.css']
+  styleUrls: ['./aboutus.component.css'],
 })
 
 /**
  * @Params Creating the class AboutusComponent and exporting it
  */
 export class AboutusComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

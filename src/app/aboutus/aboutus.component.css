@@ -1,51 +1,46 @@
 /* This code is css code for the Aboutus component */
 
-.heading-one{
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    font-size: 30px;
-    color: rgb(161, 96, 36);
+.heading-one {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 30px;
+  color: rgb(161, 96, 36);
 }
 
-.heading{
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    font-size: 25px;
-    color: rgb(36, 86, 161);
+.heading {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 25px;
+  color: rgb(36, 86, 161);
 }
 
 .follow-us-section {
-    background-color: white;
-  }
-  .follow-us-section-heading {
-    text-align: center;
-    color: #183b56;
-    font-family: "Roboto";
-    font-size: 28px;
-    font-weight: 700;
-  }
-  .follow-us-icon-container {
-    background-color: #faf7e8;
-    width: 50px;
-    height: 50px;
-    border-radius: 40px;
-    margin: 15px;
-    padding-top: 22px;
-    padding-bottom: 14px;
-    padding-right: 16px;
-    padding-left: 22px;
-    float: left;
-    cursor: pointer;
-  }
-  .icon {
-    color: #d0b200;
-    font-size: 35px;
-  }
-  .icon-container{
-      padding-left: 30%;
-  }
-
-
-
-
-
+  background-color: white;
+}
+.follow-us-section-heading {
+  text-align: center;
+  color: #183b56;
+  font-family: "Roboto";
+  font-size: 28px;
+  font-weight: 700;
+}
+.follow-us-icon-container {
+  background-color: #faf7e8;
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+  margin: 15px;
+  padding-top: 22px;
+  padding-bottom: 14px;
+  padding-right: 16px;
+  padding-left: 22px;
+  float: left;
+  cursor: pointer;
+}
+.icon {
+  color: #d0b200;
+  font-size: 35px;
+}
+.icon-container {
+  padding-left: 30%;
+}

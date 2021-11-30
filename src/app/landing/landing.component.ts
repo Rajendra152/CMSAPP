@@ -9,18 +9,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.css']
+  styleUrls: ['./landing.component.css'],
 })
 
 /**
  * @Params Creating the class LandingComponent and exporting it
  */
-
 export class LandingComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

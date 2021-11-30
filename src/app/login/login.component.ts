@@ -1,4 +1,3 @@
-
 /**
  * @description The below code is used to display about the details of the login page of application
  * importing Component,OnInit from '@angular/core';
@@ -20,12 +19,11 @@ import { HttpClient } from '@angular/common/http';
 /**
  * @Params Creating the class LoginComponent and exporting it
  */
-
 export class LoginComponent implements OnInit {
   public data = {
-  email : '',
-  password : '',
-  }
+    email: '',
+    password: '',
+  };
 
   valid = {
     email: true,
@@ -33,7 +31,11 @@ export class LoginComponent implements OnInit {
   };
 
   public loginObj = new UserModel();
-  constructor(private http: HttpClient, private router: Router, private api: ApiService) { }
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private api: ApiService
+  ) {}
 
   ngOnInit(): void {}
   validate(type: string): void {
@@ -49,17 +51,16 @@ export class LoginComponent implements OnInit {
     if (type === 'email') {
       this.data.email = event.target.value;
     }
-    this.validate(type)
+    this.validate(type);
   }
 
   Login() {
     const formData = new FormData();
-    formData.append("Email",this.data.email)
-    formData.append("Password",this.data.password)
-    console.log(this.loginObj)
-    this.api.Login(formData)
-      .subscribe(res => {
-        alert("success");
-      })
+    formData.append('Email', this.data.email);
+    formData.append('Password', this.data.password);
+    console.log(this.loginObj);
+    this.api.Login(formData).subscribe((res) => {
+      alert('success');
+    });
   }
 }

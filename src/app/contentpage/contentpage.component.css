@@ -1,98 +1,97 @@
-
 /*This code is the css code for the content page */
 
-#contact-form{
+#contact-form {
   width: 100%;
   height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
-#contact-form form{
+#contact-form form {
   display: flex;
   width: 70%;
   height: 60vh;
   background-color: #1a1a1a;
-  box-shadow: 2px 12px 20px rgba(0,0,0,0.2);
-  border: 1px solid rgba(155, 11, 11, 0.01)
+  box-shadow: 2px 12px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(155, 11, 11, 0.01);
 }
 
-.contact-left{
+.contact-left {
   width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.contact-right{
+.contact-right {
   width: 60%;
   height: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-left: 1px solid rgba(255,255,255,0.08);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.c-l-heading{
+.c-l-heading {
   font-family: calibri;
-  color:#FFFFFF;
+  color: #ffffff;
   font-size: 3rem;
   letter-spacing: 2px;
   font-weight: 400;
-  
 }
-.f-name,.f-email{
+.f-name,
+.f-email {
   display: flex;
   flex-direction: column;
   font-family: calibri;
-  
 }
-.f-name font,.f-email font{
-  color:#BFBFBF;
+.f-name font,
+.f-email font {
+  color: #bfbfbf;
   font-size: 22px;
 }
-.f-name input,.f-email input{
+.f-name input,
+.f-email input {
   height: 30px;
-  width:250px;
+  width: 250px;
   border: none;
   outline: none;
-  background-color:transparent;
+  background-color: transparent;
   border-bottom: 1px solid #929292;
-  color:#FFFFFF;
+  color: #ffffff;
   margin: 10px 0px;
 }
 .f-email input::placeholder,
-.f-name input::placeholder{
+.f-name input::placeholder {
   opacity: 0.5;
   letter-spacing: 1px;
 }
 .f-email input:focus,
-.f-name input:focus{
+.f-name input:focus {
   border-bottom: 1px solid #17d1ac;
   transition: all ease 0.5s;
-}.message font{
-  font-size: 18px;
-  color:#4E4E4E;
-  font-family: calibri;
-  
 }
-.message{
+.message font {
+  font-size: 18px;
+  color: #4e4e4e;
+  font-family: calibri;
+}
+.message {
   margin: 20px;
 }
-.contact-right textarea{
+.contact-right textarea {
   width: 100% !important;
   height: 320px !important;
   border: none;
   outline: none;
-  background-color:transparent;
+  background-color: transparent;
   box-sizing: border-box;
-  color:#EBEBEB;
+  color: #ebebeb;
   font-size: 16px;
 }
-.contact-right textarea::placeholder{
-  color:#EBEBEB;
+.contact-right textarea::placeholder {
+  color: #ebebeb;
   font-size: 18px;
   letter-spacing: 2px;
   font-family: calibri;
@@ -108,8 +107,7 @@
   height: 70px;
   width: 70px;
   float: right;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   border-width: 0px;
   border-radius: 10px;
 }
-

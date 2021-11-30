@@ -5,7 +5,6 @@
  */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -14,8 +13,8 @@ import { LandingComponent } from './landing/landing.component';
 import { PasswordComponent } from './password/password.component';
 import { ContentpageComponent } from './contentpage/contentpage.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { HttpClientModule } from "@angular/common/http";
-import { FormsModule,ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from './shared/api.service';
 
 @NgModule({
@@ -26,16 +25,16 @@ import { ApiService } from './shared/api.service';
     LandingComponent,
     PasswordComponent,
     ContentpageComponent,
-    AboutusComponent
+    AboutusComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [ApiService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

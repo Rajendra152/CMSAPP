@@ -1,4 +1,3 @@
-
 /**
  * @description The below code is used to display about the details of the forgot password page of application
  * importing Component,OnInit from '@angular/core';
@@ -6,19 +5,17 @@
  */
 
 import { Component, OnInit } from '@angular/core';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-password',
   templateUrl: './password.component.html',
-  styleUrls: ['./password.component.css']
+  styleUrls: ['./password.component.css'],
 })
-
 
 /**
  * @Params Creating the class PasswordComponent and exporting it
  */
-
 export class PasswordComponent implements OnInit {
   email = '';
 
@@ -26,10 +23,9 @@ export class PasswordComponent implements OnInit {
     email: true,
   };
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   validate(type: string): void {
     const emailPattern = /\S+@\S+\.\S+/;
 
@@ -43,10 +39,13 @@ export class PasswordComponent implements OnInit {
     if (type === 'email') {
       this.email = event.target.value;
     }
-    this.validate(type)
+    this.validate(type);
   }
-  successNotification(){
-    Swal.fire('Password has been successfully updated', 'We have been informed!', 'success')
-  } 
+  successNotification() {
+    Swal.fire(
+      'Password has been successfully updated',
+      'We have been informed!',
+      'success'
+    );
+  }
 }
-
