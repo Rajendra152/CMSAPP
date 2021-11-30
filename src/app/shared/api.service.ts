@@ -13,7 +13,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class ApiService {
-  readonly APIUrl = 'http://localhost:47667/api/customer/landing'; //Backend localhost link
+  readonly APIUrl = 'http://localhost:51584/swagger/api/Customer/Registration'; //Backend localhost link
 
   constructor(private _http: HttpClient) {}
 
